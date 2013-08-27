@@ -4,9 +4,11 @@ A Clojure library designed to wrap the Java libraries for XML schema validation.
 
 ## Usage
 
+```
 (require '[uk.me.rkd.xml-validation :as xmlv])
 (def is-valid-xml? (xmlv/create-validation-fn "resources/example.xsd"))
 (is-valid-xml? "<foo><bar/></foo>")
+```
 
 ## License
 

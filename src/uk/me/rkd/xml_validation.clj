@@ -7,15 +7,14 @@
 (import 'java.io.StringReader)
 (import 'javax.xml.transform.stream.StreamSource)
 
-(defn create-validation-fn [schema]
-  (let [validator (.newValidator
-      (.newSchema
-       (SchemaFactory/newInstance XMLConstants/W3C_XML_SCHEMA_NS_URI)
-       (StreamSource. (File. schema))
-       ))]
+(defn create-validation-fn [& schemas]
+  (let [sources (into-array StreamSource (map #(-> (File. %)
+                                                   (StreamSource.)) schemas))
+        validator (-> (SchemaFactory/newInstance XMLConstants/W3C_XML_SCHEMA_NS_URI)
+                      (.newSchema sources)
+                      (.newValidator))]
     (fn [xmldoc]
       (try
-        (.validate validator
-                   (StreamSource. (StringReader. xmldoc)))
+        (.validate validator (StreamSource. (StringReader. xmldoc)))
         true
         (catch SAXException e false)))))

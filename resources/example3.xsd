@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<xs:schema targetNamespace="http://test3.org/test" elementFormDefault="unqualified"
+    attributeFormDefault="unqualified" xmlns:ex3="http://test3.org/test"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:complexType name="a_note">
+  <xs:sequence>
+    <xs:element name="to" type="xs:string"/>
+    <xs:element name="from" type="xs:string"/>
+    <xs:element name="heading" type="xs:string"/>
+    <xs:element name="body" type="xs:string"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:element name="note" type="ex3:a_note"/>
+
+</xs:schema>

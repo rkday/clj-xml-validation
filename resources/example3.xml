@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ex3:note xmlns:ex3="http://test3.org/test" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://test3.org/test example3.xsd ">
+  <to>to</to>
+  <from>from</from>
+  <heading>heading</heading>
+  <body>body</body>
+</ex3:note>

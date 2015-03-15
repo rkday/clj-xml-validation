@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<xs:schema targetNamespace="http://test2.org/test" elementFormDefault="unqualified"
+    attributeFormDefault="unqualified" xmlns:ex2="http://test2.org/test"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:complexType name="a_todo">
+  <xs:sequence>
+    <xs:element name="when" type="xs:string"/>
+    <xs:element name="task" type="xs:string"/>
+    <xs:element name="done" type="xs:string"/>
+  </xs:sequence>
+</xs:complexType>
+
+<xs:element name="todo" type="ex2:a_todo"/>
+
+</xs:schema>

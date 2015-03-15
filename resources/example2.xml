@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ex2:todo xmlns:ex2="http://test2.org/test" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://test2.org/test http://test2.org/test ">
+  <when>when</when>
+  <task>task</task>
+  <done>done</done>
+</ex2:todo>
+

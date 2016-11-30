@@ -1,4 +1,4 @@
-(ns uk.me.rkd.xml-validation)
+(ns datil.xml-validation)
 
 (import 'javax.xml.XMLConstants)
 (import 'org.xml.sax.SAXException)

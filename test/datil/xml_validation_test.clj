@@ -1,6 +1,6 @@
-(ns uk.me.rkd.xml-validation-test
+(ns datil.xml-validation-test
   (:require [clojure.test :refer :all]
-            [uk.me.rkd.xml-validation :refer :all]))
+            [datil.xml-validation :refer :all]))
 
 (def validate (create-validation-fn "resources/example.xsd"))
 (def validate-two (create-validation-fn "resources/example2.xsd" "resources/example3.xsd"))
@@ -33,4 +33,3 @@
 (deftest either-malformed
   (testing "validator with 2 schemas fails if either type of xml is malformed"
     (is (= false (validate-two "<wrong<")))))
-
